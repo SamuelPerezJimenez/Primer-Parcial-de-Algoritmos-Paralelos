@@ -3,11 +3,11 @@ CREATE TABLE color
     id SERIAL,
     name text,
     hexadecimal text,
-    CONSTRAINT employees_pkey PRIMARY KEY (id)
+    CONSTRAINT color_pkey PRIMARY KEY (id)
 );
 
 INSERT INTO color(name, hexadecimal) VALUES
-(
+  (
     'Absolute Zero',
     '#0048BA'
   ),
@@ -162,4 +162,4 @@ INSERT INTO color(name, hexadecimal) VALUES
   (
     'Arctic Lime',
     '#D0FF14'
-  ),;
+  );
