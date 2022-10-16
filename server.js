@@ -6,16 +6,16 @@ const app = express();
 const port = 8080;
 
 const client = new Client({
-  password: "root",
-  user: "root",
+  password: "1170167",
+  user: "1170167",
   host: "postgres",
 });
 
 app.use(express.static("public"));
 
-app.get("/employees", async (req, res) => {
+app.get("/colors", async (req, res) => {
   const results = await client
-    .query("SELECT * FROM employees")
+    .query("SELECT * FROM color")
     .then((payload) => {
       return payload.rows;
     })
@@ -31,7 +31,7 @@ app.get("/employees", async (req, res) => {
   await client.connect();
 
   app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(` app listening at ${port}`);
   });
 })();
 
