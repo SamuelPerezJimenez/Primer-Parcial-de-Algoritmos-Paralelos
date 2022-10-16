@@ -13,9 +13,9 @@ const client = new Client({
 
 app.use(express.static("public"));
 
-app.get("/employees", async (req, res) => {
+app.get("/colors", async (req, res) => {
   const results = await client
-    .query("SELECT * FROM employees")
+    .query("SELECT * FROM color")
     .then((payload) => {
       return payload.rows;
     })
