@@ -8,7 +8,6 @@ const port = 8080;
 const client = new Client({
   password: "1170167",
   user: "1170167",
-  database: "root",
   host: "postgres",
 });
 
